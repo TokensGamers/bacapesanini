@@ -3,7 +3,6 @@ body {
   font-size: 60px;
   src: url(https://fonts.gstatic.com/s/caveat/v17/WnznHAc5bAfYB2QRah7pcpNvOx-pjfJ9eIWpYQ.woff2) format('woff2');
   background-color: "black";
-  color: "white";
 }
 
 .leftm {
@@ -14,6 +13,7 @@ body {
   display: flex;
   display: table-cell;
   vertical-align:middle;
+  color: "white";
 }
 
 .rightm {
@@ -24,4 +24,5 @@ body {
   display: flex;
   display: table-cell;
   vertical-align:middle;
+  color: "white";
 }
