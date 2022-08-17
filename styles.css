@@ -1,12 +1,14 @@
 body {
   font-family: "Segoe Print";
-  font-size: 40px
+  font-size: 40px;
 }
 
 .leftm {
-  text-align: left
+  text-align: left;
+  vertical-align:middle;
 }
 
 .rightm {
-  text-align: right
+  text-align: right;
+  vertical-align:middle;
 }
