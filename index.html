@@ -19,18 +19,20 @@
 				header.textContent += text.charAt(i);
 				i++;
 				await new Promise(r => setTimeout(r, 56));
-				await typing();
+				typing();
 			}
 		}
 		async function animateMessage() 
 		{
 			const textarr = ["first message", "second message", "third message", "forth message"];
+			const header = document.getElementById("textcontent");
+			header.textContent = "";
+			
 			for (let mess of textarr)
 			{
 				text = mess;
-				await typing();
+				typing();
 				i = 0;
-				const header = document.getElementById("textcontent");
 				header.textContent = "";
 				
 				j++;
