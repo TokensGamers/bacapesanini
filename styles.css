@@ -5,10 +5,14 @@ body {
 
 .leftm {
   text-align: left;
+  display: flex;
+  display: table-cell;
   vertical-align:middle;
 }
 
 .rightm {
   text-align: right;
+  display: flex;
+  display: table-cell;
   vertical-align:middle;
 }
