@@ -10,30 +10,31 @@
 	</body>
 	<script>
 		var i = 0, j = 0, text;
-		const textarr = ["first message", "second message", "third message", "forth message"];
 		
-		function typing()
+		async function typing()
 		{
 			if(i < text.length)
 			{
 				const header = document.getElementById("textcontent");
 				header.textContent += text.charAt(i);
 				i++;
-				setTimeout(typing, 56);
+				await new Promise(r => setTimeout(r, 56));
+				typing();
 			}
 		}
-		function animateMessage() 
+		async function animateMessage() 
 		{
-			if (j < textarr.length)
+			const textarr = ["first message", "second message", "third message", "forth message"];
+			for (let mess of textarr)
 			{
-				text = textarr[j];
+				text = mess;
 				typing();
 				i = 0;
 				const header = document.getElementById("textcontent");
 				header.textContent = "";
 				
 				j++;
-				animateMessage();
+				await new Promise(r => setTimeout(r, 2000));
 			}
 		}
 		animateMessage();
