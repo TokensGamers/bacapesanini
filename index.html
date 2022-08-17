@@ -28,6 +28,8 @@
 				text = mess;
 				typing();
 				i = 0;
+				const header = document.getElementById("textcontent");
+				header.textContent = "";
 				
 				await new Promise(r => setTimeout(r, 2000));
 			}
