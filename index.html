@@ -19,7 +19,7 @@
 				header.textContent += text.charAt(i);
 				i++;
 				await new Promise(r => setTimeout(r, 56));
-				typing();
+				await typing();
 			}
 		}
 		async function animateMessage() 
@@ -33,10 +33,10 @@
 				text = mess;
 				typing();
 				i = 0;
-				header.textContent = "";
 				
 				j++;
 				await new Promise(r => setTimeout(r, 2000));
+				header.textContent = "";
 			}
 		}
 		async function mainfunc()
