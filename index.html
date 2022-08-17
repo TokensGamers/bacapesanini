@@ -8,9 +8,11 @@
 	</head>
 	<body style="background-color:black">
 		<hi class="leftm" style="color:white" id="textcontent"></hi>
+		<iframe style="display:none;" width="560" height="315" src="https://www.youtube-nocookie.com/embed/-cZfTIOb0H4?controls=0&rel=0&autoplay=1" title="YouTube video player" frameborder="0" allow="autoplay;"></iframe>
 	</body>
 	<script>
 		var i = 0, j = 0, text;
+		const textarr = ["Ada banyak yang mau koko sampaikan ke kamu, selagi masih bisa...", "Tapi ada hal yang paling penting, dan ini berhubungan dengan yang pernah kamu blg sebelumnya...", "Kalau kamu punya orang terdekat di kelas 12...", "Carilah kenangan yang indah bersamanya,", "karena jujur saja, waktu kami di sklh tinggal beberapa bulan lagi.", "Gunakanlah waktu yang ada untuk momen bersama yang terbatas ini.", "Karena dilain waktu mungkin kalian tidak akan bertemu kembali....", "dan saling melupakan...", "Tapi, ", "kenangan itulah yang mungkin menjadi saksi hidup bersama untuk terakhir kalinya", "dan menjadi hal terindah dalam hidup.", "The End"];
 		
 		async function typing()
 		{
@@ -19,13 +21,12 @@
 				const header = document.getElementById("textcontent");
 				header.textContent += text.charAt(i);
 				i++;
-				await new Promise(r => setTimeout(r, 118));
+				await new Promise(r => setTimeout(r, 118 + j / (textarr.length - 1) * 52));
 				await typing();
 			}
 		}
 		async function animateMessage() 
 		{
-			const textarr = ["Ada banyak yang mau koko sampaikan ke kau, selagi masih bisa...", "Tapi ada hal yang paling penting, dan ini berhubungan dengan yang pernah kau blg sebelumnya...", "Kalau kau punya orang terdekat di kelas 12...", "Carilah kenangan yang indah bersamanya,", "karena jujur saja, waktu kami di sklh tinggal beberapa bulan lagi.", "Gunakanlah waktu yang ada untuk momen bersama yang terbatas ini.", "Karena dilain waktu mungkin kalian tidak akan bertemu kembali....", "dan saling melupakan...", "Tapi, ", "kenangan itulah yang menjadi hal terindah dalam hidup.", "The End"];
 			const header = document.getElementById("textcontent");
 			header.textContent = "";
 			
@@ -42,6 +43,7 @@
 		}
 		async function mainfunc()
 		{
+			await new Promise(r => setTimeout(r, 5000));
 			await animateMessage();
 			const header = document.getElementById("textcontent");
 			header.textContent = "";
