@@ -9,7 +9,9 @@
 		<hi class="leftm" id="textcontent">Any short message here. It can only contains several words, maybe 7 - 8 words.</hi>
 	</body>
 	<script>
-		var i = 0, text;
+		var i = 0, j = 0, text;
+		const textarr = ["first message", "second message", "third message", " "];
+		
 		function typing()
 		{
 			if(i < text.length)
@@ -20,18 +22,18 @@
 				setTimeout(typing, 56);
 			}
 		}
-		async function animateMessage() 
+		function animateMessage() 
 		{
-			const textarr = ["first message", "second message", "third message", " "];
-			for (let mess of textarr)
+			if (j < textarr.length)
 			{
-				text = mess;
+				text = textarr[j];
 				typing();
 				i = 0;
 				const header = document.getElementById("textcontent");
 				header.textContent = "";
 				
-				await new Promise(r => setTimeout(r, 2000));
+				j++;
+				setTimeout(animateMessage, 2000);
 			}
 		}
 		animateMessage()
