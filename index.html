@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
-		<hi class="leftm" id="textcontent">Any short message here. It can only contains several words, maybe 7 - 8 words.</hi>
+		<hi class="leftm" id="textcontent"></hi>
 	</body>
 	<script>
 		var i = 0, j = 0, text;
@@ -18,7 +18,7 @@
 				const header = document.getElementById("textcontent");
 				header.textContent += text.charAt(i);
 				i++;
-				await new Promise(r => setTimeout(r, 56));
+				await new Promise(r => setTimeout(r, 118));
 				await typing();
 			}
 		}
