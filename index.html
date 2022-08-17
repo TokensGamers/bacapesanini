@@ -10,7 +10,7 @@
 	</body>
 	<script>
 		var i = 0, j = 0, text;
-		const textarr = ["first message", "second message", "third message", " "];
+		const textarr = ["first message", "second message", "third message", "forth message"];
 		
 		function typing()
 		{
@@ -36,6 +36,8 @@
 				setTimeout(animateMessage, 2000);
 			}
 		}
-		animateMessage()
+		animateMessage();
+		const header = document.getElementById("textcontent");
+		header.textContent = "";
 	</script>
 </html>
