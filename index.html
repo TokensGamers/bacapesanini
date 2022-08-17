@@ -19,7 +19,7 @@
 				header.textContent += text.charAt(i);
 				i++;
 				await new Promise(r => setTimeout(r, 56));
-				typing();
+				await typing();
 			}
 		}
 		async function animateMessage() 
@@ -28,7 +28,7 @@
 			for (let mess of textarr)
 			{
 				text = mess;
-				typing();
+				await typing();
 				i = 0;
 				const header = document.getElementById("textcontent");
 				header.textContent = "";
@@ -37,8 +37,12 @@
 				await new Promise(r => setTimeout(r, 2000));
 			}
 		}
-		animateMessage();
-		const header = document.getElementById("textcontent");
-		header.textContent = "";
+		async function mainfunc()
+		{
+			await animateMessage();
+			const header = document.getElementById("textcontent");
+			header.textContent = "";
+		}
+		mainfunc();
 	</script>
 </html>
