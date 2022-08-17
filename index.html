@@ -25,7 +25,7 @@
 		}
 		async function animateMessage() 
 		{
-			const textarr = ["first message", "second message", "third message", "forth message"];
+			const textarr = ["Ada banyak yang mau koko sampaikan ke kau, selagi masih bisa...", "Tapi ada hal yang paling penting, dan ini berhubungan dengan yang pernah kau blg sebelumnya...", "Kalau kau punya orang terdekat di kelas 12...", "Carilah kenangan yang indah bersamanya,", "karena jujur saja, waktu kami di sklh tinggal beberapa bulan lagi.", "Gunakanlah waktu yang ada untuk momen bersama yang terbatas ini.", "Karena dilain waktu mungkin kalian tidak akan bertemu kembali....", "dan saling melupakan...", "Tapi, ", "kenangan itulah yang menjadi hal terindah dalam hidup.", "The End"];
 			const header = document.getElementById("textcontent");
 			header.textContent = "";
 			
@@ -36,7 +36,7 @@
 				i = 0;
 				
 				j++;
-				await new Promise(r => setTimeout(r, 2000));
+				await new Promise(r => setTimeout(r, 3000));
 				header.textContent = "";
 			}
 		}
